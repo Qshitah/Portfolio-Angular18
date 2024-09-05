@@ -1,0 +1,26 @@
+<section class="skills section" id="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills__container bd-grid">
+      @for(skill of skills; track $index){
+        <div>
+          <h2 class="skills__subtitle" >{{skill.name}}</h2>
+          <p class="skills__text">{{skill.description}}</p>
+          @for(skillItem of skill.items; track $index){
+            <div class="skills__data" [style]="{backgroundColor: $even ? 'white' : 'lightgrey'}">
+              <div class="skills__names" >
+                  <i [className]="'bx ' + skillItem.icon + ' skills__icon'" ></i>
+                  <span class="skills__name" >{{skillItem.name}}</span>
+              </div>
+          </div>
+          }
+
+        </div>
+      }
+
+      <div>
+          <img src="images/work3.jpg" alt="" class="skills__img">
+      </div>
+
+  </div>
+</section>

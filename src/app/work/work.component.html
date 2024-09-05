@@ -1,0 +1,12 @@
+<section class="work section" id="work">
+  <h2 class="section-title">Work</h2>
+
+  <div class="work__container bd-grid">
+      @for(work of works; track $index){
+        <a [href]="work.link" class="work__img" >
+          <img [src]="work.image" [alt]="work.name" [style]="{height: '200px',objectFit: 'cover', objectPosition: 'center',width: '100%'}">
+          <h4 class="work__title" [style]="{color: 'black', textAlign: 'center'}">{{(work.name | uppercase)}}</h4>
+        </a>
+      }
+  </div>
+</section>

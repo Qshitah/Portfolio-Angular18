@@ -1,0 +1,9 @@
+<footer class="footer">
+  <p class="footer__title">Marouan Akechtah</p>
+  <div class="footer__social">
+      @for(socialLink of socialLinks; track $index){
+        <a [href]="socialLink.link" class="footer__icon"><i [className]="socialLink.iconClass" ></i></a>
+
+      }
+  </div>
+</footer>

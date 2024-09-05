@@ -1,0 +1,19 @@
+<header class="l-header">
+  <nav class="nav bd-grid">
+      <div>
+          <a [href]="linkedinLink" target="_blank" class="nav__logo">Marouan Akechtah</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            @for(link of menu; track $index){
+              <app-link [link]="link.name"></app-link>
+            }
+          </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-menu'></i>
+      </div>
+  </nav>
+</header>
